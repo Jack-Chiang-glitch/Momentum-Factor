@@ -1,4 +1,4 @@
-# Momentum-Volitility Factor ()
+# Momentum-Volitility Factor (Provide both Chinese and English versions of README.md.)
 
 
 因子策略，利用動能因子篩選出S&P 500的前10股票做交易，每一季換一次倉，數據處理有用離散傅立葉轉換(對於選股的當下，往回溯10年的股價做傅立葉轉換)，消除市場噪音，選出高潛力，低波動的股票，最後獲得比帶盤低的風險但是報酬是數倍。<br>
@@ -29,8 +29,15 @@ S = zscore ( std ( 近六個月的股價) )<br>
 
 未來改進 : ﻿用布林通道提前篩選出進出場點位，利用VIX指數，調整帶寬，市場恐慌時就讓帶寬變小，避免市場震盪影響，市場行情好的話就把帶寬變長，讓股票漲上去。<br><br>
 
-
+# 績效
 ![image](https://github.com/user-attachments/assets/53da4577-1136-4560-8832-64f95dfe5693)
+
+# 風險及獲利指標
+![image](https://github.com/user-attachments/assets/81e64f5c-3142-48a2-bdbd-1920d57a2b9a)
+
+# 傅立葉轉換取去除噪音
+![image](https://github.com/user-attachments/assets/d3df5312-d238-4cac-9ed1-5a03e618a473)
+
 
 
 
