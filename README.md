@@ -1,4 +1,4 @@
-# Momentum-Volitility Factor
+# Momentum-Volitility Factor ()
 
 
 因子策略，利用動能因子篩選出S&P 500的前10股票做交易，每一季換一次倉，數據處理有用離散傅立葉轉換(對於選股的當下，往回溯10年的股價做傅立葉轉換)，消除市場噪音，選出高潛力，低波動的股票，最後獲得比帶盤低的風險但是報酬是數倍。<br>
@@ -10,8 +10,8 @@
 M1 = Price ratio( 昨天 v.s  6   天前 )<br>
 M2 = Price ratio( 昨天 v.s  15 天前 )<br>
 M3 = Price ratio( 昨天 v.s  30 天前 )<br>
-P = zscore(M1*M2*M3)<br>
-直觀意涵 : M1*M2*M3低的話，代表股價還保有潛力<br>
+P = zscore(M1 x M2 x M3)<br>
+直觀意涵 : M1 x M2 x M3低的話，代表股價還保有潛力<br>
 
 低波動率 : <br>
 
@@ -23,11 +23,15 @@ S = zscore ( std ( 近六個月的股價) )<br>
 最佳化 : <br>
 一旦單一股票下跌超過5%，那支股票就止損<br>
 
-![image](https://github.com/user-attachments/assets/53da4577-1136-4560-8832-64f95dfe5693)
+
 
 
 
 未來改進 : ﻿用布林通道提前篩選出進出場點位，利用VIX指數，調整帶寬，市場恐慌時就讓帶寬變小，避免市場震盪影響，市場行情好的話就把帶寬變長，讓股票漲上去。<br><br>
+
+
+![image](https://github.com/user-attachments/assets/53da4577-1136-4560-8832-64f95dfe5693)
+
 
 
 Factor Strategy<br>
@@ -43,10 +47,10 @@ Potential:<br>
 M1 = Price ratio( yesterday v.s  6   days ago )<br>
 M2 = Price ratio( yesterday v.s  15 days ago )<br>
 M3 = Price ratio( yesterday v.s  30 days ago )<br>
-P = zscore(M1*M2*M3)<br>
+P = zscore(M1 x M2 x M3)<br>
 
 
-Intuition : small M1*M2*M3 means that the stock remains potential<br>
+Intuition : small M1 x M2 x M3 means that the stock remains potential<br>
 
 
 S = zscore ( std ( prices of past 6 months ) )<br>
