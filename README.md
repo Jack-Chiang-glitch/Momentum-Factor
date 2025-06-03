@@ -1,4 +1,4 @@
-# Momentum-Volitility Factor (Provide both Chinese and English versions of README.md.)
+# Mean Reversion-Volitility Factor (Provide both Chinese and English versions of README.md.)
 
 
 因子策略，利用動能因子篩選出S&P 500的前10股票做交易，每一季換一次倉，數據處理有用離散傅立葉轉換(對於選股的當下，往回溯10年的股價做傅立葉轉換)，消除市場噪音，選出高潛力，低波動的股票，最後獲得比帶盤低的風險但是報酬是數倍。<br>
